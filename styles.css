@@ -1,0 +1,74 @@
+body {
+    font-family: 'Lucida Sans'; 
+}
+
+header{
+   height: auto;
+   padding: 10px 0;
+   border-bottom: 1px solid #000000;
+}
+header.logo h2{
+    font-size: 35px;
+}
+header nav .nav-list{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+/* header nav .nav-list .list{
+    display: inline-block;
+} */
+.scroll-pov {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #f1f1f1;
+  }
+  #about{
+    transition-delay: 1s;
+  }
+    /* The progress container (grey background) */
+  .progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+  }
+  
+  /* The progress bar (scroll indicator) */
+  .progress-bar {
+    height: 8px;
+    background: #04AA6D;
+    width: 0%;
+  }
+.card {
+    box-shadow:inset;
+    transition: 0.3s;
+}
+.card:hover {
+    box-shadow: inset;
+}
+.container {
+    padding: 2px 16px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+  }
+  
+  /* Add rounded corners to the top left and the top right corner of the image */
+  img {
+    border-radius: 5px 5px 0 0;
+  }
+footer {
+    background: #000000;
+    color: white;
+    text-align: center;
+    display: block;
+    unicode-bidi: isolate;
+    padding: 2rem;
+    /* margin-top: 3rem; */
+    position:fixed ;
+    position: relative;
+}
