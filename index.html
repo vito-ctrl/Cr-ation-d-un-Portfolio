@@ -1,68 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
-  <!-- header -->
-  <header>
-    <div class="container">
-      <div class="row">
-        <!-- logo -->
-         <div class="col-lg-3">
-          <div class="logo">
-            <h2>portfolio</h2>
-          </div>
-         </div>
-         <!-- nav -->
-          <nav class="col-log-9">
-            <ul class="nav-list">
-              <li class="list"><a href="#">home</a></li>
-              <li class="list"><a href="#about">about</a></li>
-              <li class="list"><a href="#">project</a></li>
-              <li class="list"><a href="#">contact</a></li>
-            </ul>
-          </nav>
-      </div>
-    </div>
-  </header>
-  <div class="scroll-pov">
-    <!-- <h2>Scroll Indicator</h2> -->
-    <div class="progress-container">
-      <div class="progress-bar" id="myBar"></div>
-    </div>
-  </div>
-  
-  <div>content...</div>
-  <div class="card">
-    <img src="kendriclamar.webp" alt="avater" style="width: 50%">
-    <div class="container">
-      <h4><b>aymane</b></h4>
-      <p>web dev</p>
-    </div>
-  </div>
-  <label for="username">username : </label>
-  <input type="text" name="username"><br>
-  <label for="phonenuber">phonenuber :</label>
-  <input type="phonenumber" name="phonenuber" id="phonenuber"><br>
-  <label for="email">email : </label>
-  <input type="email" name="email"><br>
-  <label for="message"> message</label>
-  <input type="text" name="message" id="text">
-  <section>
-    <div id="about">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, hic doloribus? Recusandae exercitationem nam reiciendis blanditiis enim aliquam, reprehenderit accusamus. Quaerat veniam debitis sit voluptates deleniti accusamus, ducimus sequi tenetur?
-    </div>
-  </section>
+<body style="background-color:#e1e1e1">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-1 fw-bold text-bg-gradient" href="#" style="background: rgb(255, 255, 255); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                Aymane
+            </a>
+            
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-5 mx-2 position-relative" href="#home-section">
+                            Home
+                            <span class="position-absolute bottom-0 start-50 translate-middle-x border-2 border-primary" style="width: 0%; height: 2px; background: #4ECDC4; transition: width 0.3s; display: block;"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 mx-2 position-relative" href="#about-section">
+                            About
+                            <span class="position-absolute bottom-0 start-50 translate-middle-x border-2 border-primary" style="width: 0%; height: 2px; background: #4ECDC4; transition: width 0.3s; display: block;"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link fs-5 mx-2 position-relative" href="#projects-section">
+                          projects
+                          <span class="position-absolute bottom-0 start-50 translate-middle-x border-2 border-primary" style="width: 0%; height: 2px; background: #4ECDC4; transition: width 0.3s; display: block;"></span>
+                      </a>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 mx-2 position-relative" href="#contact-section">
+                            Contact
+                            <span class="position-absolute bottom-0 start-50 translate-middle-x border-2 border-primary" style="width: 0%; height: 2px; background: #4ECDC4; transition: width 0.3s; display: block;"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <footer>
-    <p>&copy; 2025 portfolio. Tous droits réservés.</p>
-</footer>
+    <!-- Home Section -->
+    <section class="Home" id="home-section">
+        <h1 id="hello">Hey, I'm Aymane Elkhadraoui</h1>
+        <p id="about">A Result-Oriented Web Developer building and managing Websites and Web Applications that leads to the success of the overall product</p>
+        <button type="button" class="btn btn-dark" id="homebotton" onclick="location.href='#projects-section'">Projects</button>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about-section">
+        <h1 id="about-title">About Me</h1>
+        <p id="description">Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
+        <div class="knowme">
+            <h1 id="getkhow">Get to know me!</h1>
+            <p id="aboutme">I'm a Frontend Focused Web Developer building and managing the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the Projects section.
+                I also like sharing content related to the stuff that I have learned over the years in Web Development so it can help other people of the Dev Community. Feel free to Connect or Follow me on my Linkedin and Instagram where I post useful content related to Web Development and Programming
+                I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</p>
+        </div>
+        <div class="skils">
+          <h1 id="skills-title">skills</h1>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects-section">
+        <div class="container py-5">
+            <h1 class="text-center mb-5" style="font-size: 70px; font-weight: bolder;">Projects</h1>
+            <p class="text-center mb-5" style="font-weight: bold;">Here you will find some of my personal projects that I created</p>
+            
+            <div class="row g-4">
+                <!-- Project Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Project Name</h5>
+                            <p class="card-text">A brief description of the project and the technologies used in its development.</p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-dark">Live Demo</button>
+                                <button class="btn btn-outline-dark">Source Code</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Project Name</h5>
+                            <p class="card-text">A brief description of the project and the technologies used in its development.</p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-dark">Live Demo</button>
+                                <button class="btn btn-outline-dark">Source Code</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Project Name</h5>
+                            <p class="card-text">A brief description of the project and the technologies used in its development.</p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-dark">Live Demo</button>
+                                <button class="btn btn-outline-dark">Source Code</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section bg-light py-5" id="contact-section">
+        <div class="container">
+            <h1 class="text-center mb-5" style="font-size: 70px; font-weight: bolder;">Contact</h1>
+            <p class="text-center mb-5" style="font-weight: bold;">Feel free to Contact me by submitting the form below</p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form id="contact-form" class="p-4 bg-white rounded shadow-sm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-bold">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-bold">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p>&copy; 2025 Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

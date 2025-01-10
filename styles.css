@@ -1,74 +1,145 @@
-body {
-    font-family: 'Lucida Sans'; 
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
 }
 
-header{
-   height: auto;
-   padding: 10px 0;
-   border-bottom: 1px solid #000000;
+body {
+  font-family: 'Inter', sans-serif;
 }
-header.logo h2{
-    font-size: 35px;
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
 }
-header nav .nav-list{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
+
+p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #6c757d;
 }
-/* header nav .nav-list .list{
-    display: inline-block;
-} */
-.scroll-pov {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-    background-color: #f1f1f1;
-  }
-  #about{
-    transition-delay: 1s;
-  }
-    /* The progress container (grey background) */
-  .progress-container {
-    width: 100%;
-    height: 8px;
-    background: #ccc;
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.container-fluid {
+  background-color: #000000;
+  font-weight: bold;
+  position: fixed;
+  top:0px;
+}
+
+.nav-item {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#navbarNav {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* Navigation Links */
+.navbar .nav-link {
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #636363 !important;
+}
+
+.navbar .nav-link:hover span,
+.navbar .nav-link.active span {
+  width: 100% !important;
+}
+
+/* Home Section */
+#home-section {
+  margin-top: 100px;
+}
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.Home #hello {
+  font-size: 100px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.Home #homebotton {
+  height: 60px;
+  width: 140px;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about #about-title {
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.knowme {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.knowme #getkhow {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Projects Section */
+.projects-section .card {
+  transition: transform 0.3s ease;
+}
+
+.projects-section .card:hover {
+  transform: translateY(-5px);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 80px 0;
+}
+
+.contact-section .form-control {
+  border: 1px solid #ced4da;
+  padding: 0.75rem;
+}
+
+.contact-section .form-control:focus {
+  border-color: #4ECDC4;
+  box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Home #hello {
+      font-size: 60px;
   }
   
-  /* The progress bar (scroll indicator) */
-  .progress-bar {
-    height: 8px;
-    background: #04AA6D;
-    width: 0%;
+  .about #about-title {
+      font-size: 50px;
   }
-.card {
-    box-shadow:inset;
-    transition: 0.3s;
-}
-.card:hover {
-    box-shadow: inset;
-}
-.container {
-    padding: 2px 16px;
-}
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px; /* 5px rounded corners */
-  }
-  
-  /* Add rounded corners to the top left and the top right corner of the image */
-  img {
-    border-radius: 5px 5px 0 0;
-  }
-footer {
-    background: #000000;
-    color: white;
-    text-align: center;
-    display: block;
-    unicode-bidi: isolate;
-    padding: 2rem;
-    /* margin-top: 3rem; */
-    position:fixed ;
-    position: relative;
 }
